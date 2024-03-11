@@ -30,7 +30,10 @@ export default function Login() {
             <button
               type="submit"
               className="bg-red rounded-6 text-bodyM mt-16 py-3"
-              onClick={() => router.push("/app")}
+              onClick={(event) => {
+                event.preventDefault();
+                router.push("/app");
+              }}
             >
               Login to your account
             </button>
