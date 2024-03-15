@@ -38,7 +38,9 @@ export default function Thumbnail({
   thumbnail,
   className,
 }: ThumbnailProps) {
-  const notify = () => toast.custom(
+  const notify = (event: any) => {
+    event.prevent
+    toast.custom(
   <div className="bg-red font-medium text-bodyM p-5 rounded-6">
     <div className="flex items-center">
       <svg width={25} height={25} className="text-white mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -47,7 +49,7 @@ export default function Thumbnail({
       </svg>
       <p className="inline">Website under construction. Please come later</p>
     </div>
-  </div>);
+  </div>);}
   return (
       <article className={`${className} relative`}>
         <div className="min-h-110 min-w-164 w-full relative">
@@ -59,8 +61,7 @@ export default function Thumbnail({
             sizes="100%"
             className="object-cover rounded-8 w-full h-auto"
           />
-          <Link
-            href="#"
+          <div
             onClick={notify}
             className="hover:opacity-100 opacity-0 flex w-full h-full bg-darkBlue bg-opacity-50 absolute top-0 items-center justify-center "
           >
@@ -74,7 +75,7 @@ export default function Thumbnail({
               />
               <p className="text-bodyS">Play</p>
             </div>
-          </Link>
+          </div>
         </div>
         <BookmarkButton
           isActive={isBookmarked}
