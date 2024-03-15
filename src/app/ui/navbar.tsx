@@ -1,7 +1,6 @@
 "use client";
 
 import Logo from "./logo";
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { onAuthStateChangedHelpter } from "../firebase/firebase";

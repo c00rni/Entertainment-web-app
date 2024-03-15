@@ -1,12 +1,11 @@
 import { fetchData } from "../lib/fetchDataHelper";
 import ThumbnailList from "./thumbnailList";
 
-export default async function SearchResult(search: any) {
-  const dataSample = await fetchData();
+export default function SearchResult(search: any) {
+  const dataSample = fetchData();
   const result = [...dataSample].filter((item) =>
     item.title.toLowerCase().includes(search.search.toLowerCase()),
   );
-  console.log();
   return (
     <>
       <main className="flex flex-col">

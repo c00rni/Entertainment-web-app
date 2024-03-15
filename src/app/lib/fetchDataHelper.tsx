@@ -1,7 +1,7 @@
 import { unstable_noStore as noStore } from "next/cache";
 import { promises as fs } from "fs";
 
-export async function fetchData() {
+export function fetchData() {
   return [
     {
       title: "Beyond Earth",

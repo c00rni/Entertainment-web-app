@@ -6,7 +6,7 @@ import SearchBar from "../ui/searchbar";
 import SearchResult from "../ui/serachResult";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("")
   return (
     <div className="flex flex-col xl:grid xl:grid-cols-[96px_1fr] xl:grid-rows-[72px_1fr] xl:gap-x-10 gap-y-5 sm:py-5 bg-darkBlue min-h-screen">
       <Navbar />
