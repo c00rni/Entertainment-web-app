@@ -26,7 +26,9 @@ export default function Navbar({ className }: NavProps) {
     return () => unsuscribe();
   }, [user]);
 
-  const notify = () => toast.custom(
+  const notify = (event: any) => {
+    event.prevent
+    toast.custom(
     <div className="bg-red font-medium text-bodyM p-5 rounded-6">
       <div className="flex items-center">
         <svg width={25} height={25} className="text-white mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -36,6 +38,7 @@ export default function Navbar({ className }: NavProps) {
         <p className="inline">Website under construction. Please come later</p>
       </div>
     </div>);
+  }
 
   return (
     <nav

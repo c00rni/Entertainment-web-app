@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import BookmarkButton from "./bookmarkButton";
-import Link from "next/link";
 import toast, { Toaster } from 'react-hot-toast';
 
 export interface Video {
@@ -63,7 +62,7 @@ export default function Thumbnail({
           />
           <div
             onClick={notify}
-            className="hover:opacity-100 opacity-0 flex w-full h-full bg-darkBlue bg-opacity-50 absolute top-0 items-center justify-center "
+            className="hover:opacity-100 opacity-0 flex w-full h-full bg-darkBlue bg-opacity-50 absolute top-0 items-center justify-center cursor-pointer"
           >
             <div className="flex p-1 px-3 items-center rounded-28 bg-slate-200 bg-opacity-30">
               <Image
